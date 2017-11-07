@@ -8,6 +8,9 @@ server:
 
 # 数据库 及 Redis 配置    
 spring:
+# disable caching for Thymeleaf so that we can make changes on the fly
+  thymeleaf:
+    cache: false
   redis:
     host: localhost
     password:

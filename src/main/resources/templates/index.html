@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <!-- Site Properties -->
-    <title>Narakai Studio</title>
-    <script src="../static/semantic/dist/jquery-3.2.1.min.js"></script>
-    <link href="../static/semantic/dist/semantic.min.css" rel="stylesheet">
-    <script src="../static/semantic/dist/semantic.min.js"></script>
-    <link href="../static/css/swiper.min.css" rel="stylesheet">
+    <title>Narakai Studio | 个人网站</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/semantic-ui/2.2.10/semantic.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/semantic-ui/2.2.10/semantic.min.js"></script>
+    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.js"></script>
+    <link href="/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +21,7 @@
 <div class="ui fixed borderless menu" th:fragment="fmenu">
     <div class="ui container">
         <a href="/" class="header item">
-            <img class="logo" src="../static/images/nhk.png">
+            <img class="logo" src="/images/0.jpg">
         </a>
         <a href="/" class="item"><i class="home icon"></i> 首页</a>
         <a href="/see" class="item"><i class="list layout icon"></i> 动态</a>
@@ -33,16 +35,11 @@
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <img src="../static/images/nhk.png" alt="Dummy Travels" class="img-circle">
+            <img src="/images/0.jpg">
         </div>
         <div class="swiper-slide">
             <div class="swiper-slide">
-                <img src="../static/images/ginkaku.jpg" alt="Dummy Travels" class="img-circle">
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="swiper-slide">
-                <img src="../static/images/nhk.png" alt="Dummy Travels" class="img-circle">
+                <img src="/images/1.jpg">
             </div>
         </div>
     </div>
@@ -54,13 +51,68 @@
     <div class="swiper-button-next"></div>
 </div>
 
-<script src="../static/js/swiper.min.js"></script>
+<div class="ui mini inverted vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui stackable inverted divided grid">
+            <div class="three wide column">
+                <h4 class="ui inverted header">源码下载</h4>
+                <div class="ui inverted link list">
+                    <a href="https://github.com/ChinaSilence/any-video" class="item" target="_blank">Github</a>
+                    <a href="http://git.oschina.net/yyd-code/any-video" class="item" target="_blank">码云</a>
+                    <a href="https://github.com/ChinaSilence/any-chat" class="item" target="_blank">Any Security</a>
+                    <a href="https://github.com/ChinaSilence/any-spring-security" class="item" target="_blank">Any
+                        Chat</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">相关文档</h4>
+                <div class="ui inverted link list">
+                    <a href="http://projects.spring.io/spring-boot/" class="item" target="_blank">Spring Boot</a>
+                    <a href="http://projects.spring.io/spring-security/" class="item" target="_blank">Spring
+                        Security</a>
+                    <a href="https://jsoup.org/" class="item" target="_blank">Jsoup</a>
+                    <a href="http://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html" class="item"
+                       target="_blank">Thymeleaf 3.0</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">其他</h4>
+                <div class="ui inverted link list">
+                    <a href="/author" class="item" target="_blank">作者信息</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header">开源声明</h4>
+                <p>本站资源来源于互联网解析，仅供学习参考，请勿用于商业用途，违者必究！</p>
+                <div class="ui labeled button" tabindex="0">
+                    <div class="ui red button"><i class="heart icon"></i> Like</div>
+                    <a class="ui basic red left pointing label" href="https://github.com/ChinaSilence/any-video"
+                       target="_blank">
+                        1,024
+                    </a>
+                </div>
+                <div class="ui labeled button" tabindex="0">
+                    <div class="ui basic blue button"><i class="fork icon"></i> Forks</div>
+                    <a class="ui basic left pointing blue label" href="https://github.com/ChinaSilence/any-video"
+                       target="_blank">
+                        1,024
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <img src="/images/0.jpg" class="ui centered mini image">
+        <div class="ui horizontal inverted small divided link list">
+            <a class="item disabled" href="#">Copyright © 2016 - 2017. All Rights Reserved</a>
+        </div>
+    </div>
+</div>
+
 <script>
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
         paginationClickable: true,
         spaceBetween: 30,
-        centeredSlides: true,
         autoplay: 2500,
         autoplayDisableOnInteraction: false,
         nextButton: '.swiper-button-next',

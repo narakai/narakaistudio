@@ -1,123 +1,100 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
     <!-- Standard Meta -->
     <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Properties -->
     <title>Narakai Studio</title>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://cdn.bootcss.com/semantic-ui/2.2.10/semantic.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/semantic-ui/2.2.10/semantic.min.js"></script>
-    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.js"></script>
-    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-<!-- following menu-->
-<div class="ui fixed borderless menu" th:fragment="fmenu">
-    <div class="ui container">
-        <a href="/" class="header item">
-            <img class="logo" src="/images/0.jpg">
-        </a>
-        <a href="/" class="item"><i class="home icon"></i> 首页</a>
-        <a href="/see" class="item"><i class="list layout icon"></i> 动态</a>
-        <a href="/search" class="item"><i class="search icon"></i> 搜索</a>
-        <a href="/parse" class="item"><i class="world icon"></i> 解析</a>
-        <a href="/tip" class="item"><i class="diamond icon"></i> 赞赏</a>
-    </div>
-</div>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="#">资料</a>
+                </li>
+                <li class="disabled">
+                    <a href="#">信息</a>
+                </li>
+                <li class="dropdown pull-right">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">下拉<strong class="caret"></strong></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">操作</a>
+                        </li>
+                        <li>
+                            <a href="#">设置栏目</a>
+                        </li>
+                        <li>
+                            <a href="#">更多设置</a>
+                        </li>
+                        <li class="divider">
+                        </li>
+                        <li>
+                            <a href="#">分割线</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="carousel slide" id="carousel-143665">
+                <ol class="carousel-indicators">
+                    <li class="active" data-slide-to="0" data-target="#carousel-143665">&nbsp;</li>
+                    <li data-slide-to="1" data-target="#carousel-143665">&nbsp;</li>
+                    <li data-slide-to="2" data-target="#carousel-143665">&nbsp;</li>
+                </ol>
 
-<!-- Swiper -->
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide" th:each="carouselPic : ${carouselPics}">
-            <a th:href="@{/view(u=${carouselPic.value})}">
-                <img th:src="${carouselPic.image}"/>
-            </a>
-        </div>
-    </div>
-    <!-- 如果需要分页器 -->
-    <div class="swiper-pagination"></div>
+                <div class="carousel-inner">
+                    <div class="item active"><img alt="" src="images/1.jpg"/>
+                        <div class="carousel-caption" contenteditable="true">
+                            <h4>棒球</h4>
 
-    <!-- 如果需要导航按钮 -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-</div>
+                            <p>棒球运动是一种以棒打球为主要特点，集体性、对抗性很强的球类运动项目，在美国、日本尤为盛行。</p>
+                        </div>
+                    </div>
 
-<div class="ui mini inverted vertical footer segment">
-    <div class="ui center aligned container">
-        <div class="ui stackable inverted divided grid">
-            <div class="three wide column">
-                <h4 class="ui inverted header">源码下载</h4>
-                <div class="ui inverted link list">
-                    <a href="https://github.com/ChinaSilence/any-video" class="item" target="_blank">Github</a>
-                    <a href="http://git.oschina.net/yyd-code/any-video" class="item" target="_blank">码云</a>
-                    <a href="https://github.com/ChinaSilence/any-chat" class="item" target="_blank">Any Security</a>
-                    <a href="https://github.com/ChinaSilence/any-spring-security" class="item" target="_blank">Any
-                        Chat</a>
+                    <div class="item"><img alt="" src="images/2.jpg"/>
+                        <div class="carousel-caption" contenteditable="true">
+                            <h4>冲浪</h4>
+
+                            <p>冲浪是以海浪为动力，利用自身的高超技巧和平衡能力，搏击海浪的一项运动。运动员站立在冲浪板上，或利用腹板、跪板、充气的橡皮垫、划艇、皮艇等驾驭海浪的一项水上运动。</p>
+                        </div>
+                    </div>
+
+                    <div class="item"><img alt="" src="images/3.jpg"/>
+                        <div class="carousel-caption" contenteditable="true">
+                            <h4>自行车</h4>
+
+                            <p>以自行车为工具比赛骑行速度的体育运动。1896年第一届奥林匹克运动会上被列为正式比赛项目。环法赛为最著名的世界自行车锦标赛。</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="three wide column">
-                <h4 class="ui inverted header">相关文档</h4>
-                <div class="ui inverted link list">
-                    <a href="http://projects.spring.io/spring-boot/" class="item" target="_blank">Spring Boot</a>
-                    <a href="http://projects.spring.io/spring-security/" class="item" target="_blank">Spring
-                        Security</a>
-                    <a href="https://jsoup.org/" class="item" target="_blank">Jsoup</a>
-                    <a href="http://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html" class="item"
-                       target="_blank">Thymeleaf 3.0</a>
-                </div>
-            </div>
-            <div class="three wide column">
-                <h4 class="ui inverted header">其他</h4>
-                <div class="ui inverted link list">
-                    <a href="/author" class="item" target="_blank">作者信息</a>
-                </div>
-            </div>
-            <div class="seven wide column">
-                <h4 class="ui inverted header">开源声明</h4>
-                <p>本站资源来源于互联网解析，仅供学习参考，请勿用于商业用途，违者必究！</p>
-                <div class="ui labeled button" tabindex="0">
-                    <div class="ui red button"><i class="heart icon"></i> Like</div>
-                    <a class="ui basic red left pointing label" href="https://github.com/narakai"
-                       target="_blank">
-                        1,024
-                    </a>
-                </div>
-                <div class="ui labeled button" tabindex="0">
-                    <div class="ui basic blue button"><i class="fork icon"></i> Forks</div>
-                    <a class="ui basic left pointing blue label" href="https://github.com/narakai"
-                       target="_blank">
-                        1,024
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="ui inverted section divider"></div>
-        <img src="/images/0.jpg" class="ui centered mini image">
-        <div class="ui horizontal inverted small divided link list">
-            <a class="item disabled" href="#">Copyright © 2016 - 2017. All Rights Reserved</a>
+                <a class="left carousel-control" data-slide="prev" href="#carousel-143665">&lsaquo;</a> <a
+                    class="right carousel-control" data-slide="next" href="#carousel-143665">&rsaquo;</a></div>
+
+            <h2>
+                标题
+            </h2>
+            <p>
+                本可视化布局程序在HTML5浏览器上运行更加完美, 能实现自动本地化保存, 即使关闭了网页, 下一次打开仍然能恢复上一次的操作.
+            </p>
+            <p>
+                <a class="btn" href="#">查看更多 »</a>
+            </p>
         </div>
     </div>
 </div>
-
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        paginationClickable: true,
-        spaceBetween: 30,
-        autoplay: 2500,
-        autoplayDisableOnInteraction: false,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        pagination: '.swiper-pagination'
-    });
-</script>
-
 </body>
 
 </html>

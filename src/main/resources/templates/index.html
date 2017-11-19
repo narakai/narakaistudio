@@ -13,56 +13,62 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.5.3/vue.min.js"></script>
 </head>
 
 <body>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
+            <!--导航-->
             <nav class="navbar navbar-default navbar-inverse" role="navigation">
                 <div class="navbar-header">
 
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                    </button> <a class="navbar-brand" href="#">Brand</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                            class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active">
+                        <li>
                             <a href="#">Link</a>
                         </li>
                         <li>
                             <a href="#">Link</a>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">Action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Something else here</a>
-                                </li>
-                                <li class="divider">
-                                </li>
-                                <li>
-                                    <a href="#">Separated link</a>
-                                </li>
-                                <li class="divider">
-                                </li>
-                                <li>
-                                    <a href="#">One more separated link</a>
-                                </li>
-                            </ul>
-                        </li>
+                        <!--<li class="dropdown">-->
+                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong-->
+                        <!--class="caret"></strong></a>-->
+                        <!--<ul class="dropdown-menu">-->
+                        <!--<li>-->
+                        <!--<a href="#">Action</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">Another action</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">Something else here</a>-->
+                        <!--</li>-->
+                        <!--<li class="divider">-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">Separated link</a>-->
+                        <!--</li>-->
+                        <!--<li class="divider">-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">One more separated link</a>-->
+                        <!--</li>-->
+                        <!--</ul>-->
+                        <!--</li>-->
                     </ul>
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">
-                            <input type="text" class="form-control" />
+                            <input type="text" class="form-control"/>
                         </div>
                         <button type="submit" class="btn btn-default">
                             Submit
@@ -70,116 +76,194 @@
                     </form>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#">Link</a>
+                            <a href="#">注册</a>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">Action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Another action</a>
-                                </li>
-                                <li>
-                                    <a href="#">Something else here</a>
-                                </li>
-                                <li class="divider">
-                                </li>
-                                <li>
-                                    <a href="#">Separated link</a>
-                                </li>
-                            </ul>
+                        <li>
+                            <a href="/login">登录</a>
                         </li>
+                        <!--<li class="dropdown">-->
+                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong-->
+                        <!--class="caret"></strong></a>-->
+                        <!--<ul class="dropdown-menu">-->
+                        <!--<li>-->
+                        <!--<a href="#">Action</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">Another action</a>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">Something else here</a>-->
+                        <!--</li>-->
+                        <!--<li class="divider">-->
+                        <!--</li>-->
+                        <!--<li>-->
+                        <!--<a href="#">Separated link</a>-->
+                        <!--</li>-->
+                        <!--</ul>-->
+                        <!--</li>-->
                     </ul>
                 </div>
 
             </nav>
-
+            <!--轮播-->
             <div class="carousel slide" id="carousel-274751">
                 <ol class="carousel-indicators">
                     <li data-slide-to="0" data-target="#carousel-274751">
                     </li>
                     <li data-slide-to="1" data-target="#carousel-274751">
                     </li>
-                    <li data-slide-to="2" data-target="#carousel-274751" class="active">
+                    <li data-slide-to="2" data-target="#carousel-274751">
                     </li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="item">
-                        <img alt="Carousel Bootstrap First" src="http://lorempixel.com/output/sports-q-c-1600-500-1.jpg" />
+                        <img alt="Carousel Bootstrap First"
+                             src="http://lorempixel.com/output/sports-q-c-1600-500-1.jpg"/>
                         <div class="carousel-caption">
                             <h4>
                                 First Thumbnail label
                             </h4>
                             <p>
-                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                                gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
                             </p>
                         </div>
                     </div>
                     <div class="item">
-                        <img alt="Carousel Bootstrap Second" src="http://lorempixel.com/output/sports-q-c-1600-500-2.jpg" />
+                        <img alt="Carousel Bootstrap Second"
+                             src="http://lorempixel.com/output/sports-q-c-1600-500-2.jpg"/>
                         <div class="carousel-caption">
                             <h4>
                                 Second Thumbnail label
                             </h4>
                             <p>
-                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                                gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
                             </p>
                         </div>
                     </div>
                     <div class="item active">
-                        <img alt="Carousel Bootstrap Third" src="http://lorempixel.com/output/sports-q-c-1600-500-3.jpg" />
+                        <img alt="Carousel Bootstrap Third"
+                             src="http://lorempixel.com/output/sports-q-c-1600-500-3.jpg"/>
                         <div class="carousel-caption">
                             <h4>
                                 Third Thumbnail label
                             </h4>
                             <p>
-                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                                gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
                             </p>
                         </div>
                     </div>
-                </div> <a class="left carousel-control" href="#carousel-274751" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-274751" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+                <a class="left carousel-control" href="#carousel-274751" data-slide="prev"><span
+                        class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control"
+                                                                                href="#carousel-274751"
+                                                                                data-slide="next"><span
+                    class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+            <!--正文-->
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img alt="Bootstrap Thumbnail First" src="http://lorempixel.com/output/people-q-c-600-200-1.jpg"/>
+                    <div class="caption">
+                        <h3>
+                            Thumbnail label
+                        </h3>
+                        <p>
+                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                            gravida at
+                            eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                        </p>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img alt="Bootstrap Thumbnail Second" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg"/>
+                    <div class="caption">
+                        <h3>
+                            Thumbnail label
+                        </h3>
+                        <p>
+                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                            gravida at
+                            eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                        </p>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg"/>
+                    <div class="caption">
+                        <h3>
+                            Thumbnail label
+                        </h3>
+                        <p>
+                            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                            gravida at
+                            eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                        </p>
+                        <p>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="row">
-        <div class="col-md-4">
-            <h2>
-                Heading
-            </h2>
-            <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
-            <p>
-                <a class="btn" href="#">View details »</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>
-                Heading
-            </h2>
-            <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
-            <p>
-                <a class="btn" href="#">View details »</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>
-                Heading
-            </h2>
-            <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
-            <p>
-                <a class="btn" href="#">View details »</a>
-            </p>
-        </div>
-    </div>
+<!--Vue test-->
+
+<!--<div id="app-5">-->
+<!--<p>{{ message }}</p>-->
+<!--<button v-on:click="reverseMessage">逆转消息</button>-->
+<!--</div>-->
+
+<!--<div id="app-2">-->
+<!--<span v-bind:title="message">-->
+<!--鼠标悬停几秒钟查看此处动态绑定的提示信息！-->
+<!--</span>-->
+<!--</div>-->
+
+<!--<div id="app-6">-->
+<!--<p>{{ message }}</p>-->
+<!--<input v-model="message">-->
+<!--</div>-->
 </div>
 </body>
+
+<script>
+    //    var app2 = new Vue({
+    //        el: '#app-2',
+    //        data: {
+    //            message: '页面加载于 ' + new Date().toLocaleString()
+    //        }
+    //    })
+    //
+    //    var app5 = new Vue({
+    //        el: '#app-5',
+    //        data: {
+    //            message: 'Hello Vue.js!'
+    //        },
+    //        methods: {
+    //            reverseMessage: function () {
+    //                this.message = this.message.split('').reverse().join('')
+    //            }
+    //        }
+    //    })
+    //
+    //    var app6 = new Vue({
+    //        el: '#app-6',
+    //        data: {
+    //            message: 'Hello Vue!'
+    //        }
+    //    })
+</script>
 
 </html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Properties -->
+    <title>Narakai Studio | 登录</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/bootstrapValidator.min.css">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrapValidator.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.5.3/vue.min.js"></script>
+
+</head>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div style="margin-bottom: 50px;">
+                <img src="/images/login.jpg" class="img-responsive center-block" width="300" height="300" alt="Logo" />
+            </div>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="inputUsername" class="col-sm-2 control-label">
+                        Username
+                    </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputUsername" name="username"/>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <label for="inputPassword" class="col-sm-2 control-label">
+                        Password
+                    </label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword" name="password" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+
+                            <label>
+                                <input type="checkbox" /> Remember me
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+
+                        <button type="submit" class="btn btn-default">
+                            Sign in
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('form').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                username: {
+                    message: '用户名验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: '用户名不能为空'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 18,
+                            message: '用户名长度必须在6到18位之间'
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_]+$/,
+                            message: '用户名只能包含大写、小写、数字和下划线'
+                        }
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: '密码不能为空'
+                        },
+                        stringLength: {
+                            min: 6,
+                            message: '密码必须大于6位'
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+</html>

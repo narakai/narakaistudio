@@ -37,6 +37,13 @@ public class ResponseBean {
     }
 
     /**
+     * 失败
+     */
+    public static ResponseBean fail(){
+        return new ResponseBean(500, "failed");
+    }
+
+    /**
      * 成功
      */
     public static ResponseBean ok(Object object){

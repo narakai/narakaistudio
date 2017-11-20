@@ -13,6 +13,11 @@ public interface UserService {
     User updateUserInfo(User user);
 
     /**
+     * 网页注册新用户
+     */
+    User register(User user);
+
+    /**
      * 获取用户信息
      * @param userId 用户Id
      * @return 用户信息

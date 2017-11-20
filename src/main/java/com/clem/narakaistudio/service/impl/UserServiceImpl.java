@@ -1,8 +1,10 @@
 package com.clem.narakaistudio.service.impl;
 
+import com.clem.narakaistudio.constant.LoginTypeEnum;
 import com.clem.narakaistudio.service.UserService;
 import com.clem.narakaistudio.service.mapper.UserMapper;
 import com.clem.narakaistudio.service.model.User;
+import com.clem.narakaistudio.tools.UUIDUtil;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
@@ -40,6 +42,20 @@ public class UserServiceImpl implements UserService {
             user.setId(origin.getId());
         }
         return user;
+    }
+
+    @Override
+    public User register(User user) {
+        user.setOpenId(UUIDUtil.getShortUuid());
+        user.setLoginType(LoginTypeEnum.WEB.name());
+        user.setAvatar("https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png");
+        User origin = userMapper.selectByName(user.getNickname());
+        if (origin == null){
+            userMapper.insert(user);
+            return user;
+        } else {
+            return null;
+        }
     }
 
     @Override

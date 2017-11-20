@@ -29,6 +29,9 @@ public interface UserMapper {
     @Select("select * from any_user where id = #{userId}")
     User selectById(@Param("userId") Long userId);
 
+    @Select("select * from any_user where nickname = #{nickname}")
+    User selectByName(@Param("nickname") String nickname);
+
     @Select("select * from any_user order by id desc limit #{size}")
     List<User> selectNew(@Param("size") int size);
 

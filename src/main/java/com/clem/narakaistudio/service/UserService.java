@@ -25,6 +25,12 @@ public interface UserService {
     User getUserInfo(Long userId);
 
     /**
+     * 获取用户信息
+     * @return 用户信息
+     */
+    User getUserInfo(String nickname, String password);
+
+    /**
      * 新用户
      */
     List<User> getNewUsers(int size);

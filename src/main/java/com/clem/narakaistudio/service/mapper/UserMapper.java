@@ -26,6 +26,9 @@ public interface UserMapper {
     @Select("select * from any_user where open_id = #{openId}")
     User selectByOpenId(@Param("openId") String openId);
 
+    @Select("select * from any_user where nickname = #{nickname} and password=#{password}")
+    User selectByNicknameAndPassword(@Param("nickname") String nickname, @Param("password") String password);
+
     @Select("select * from any_user where id = #{userId}")
     User selectById(@Param("userId") Long userId);
 

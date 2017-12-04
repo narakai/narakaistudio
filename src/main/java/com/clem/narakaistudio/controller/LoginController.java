@@ -15,14 +15,22 @@ public class LoginController {
     private final UserService userService;
 
     @GetMapping("/login")
-    public String login(Model model) {
+    public String loginGet(@ModelAttribute User user) {
         return "login";
     }
 
+    @PostMapping("/login")
+    public String login(@ModelAttribute User user) {
+        User registeredUser = userService.getUserInfo(user.getNickname(), user.getPassword());
+        if (registeredUser != null) {
+            return "/index";
+        } else {
+            return "/register";
+        }
+    }
+
     @GetMapping("/register")
-    public String register(Model model) {
-        User user = new User();
-        model.addAttribute("user", user);
+    public String registerGet(@ModelAttribute User user) {
         return "register";
     }
 

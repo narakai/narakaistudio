@@ -64,6 +64,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User getUserInfo(String nickname, String password) {
+        return userMapper.selectByNicknameAndPassword(nickname, password);
+    }
+
+    @Override
     public List<User> getNewUsers(int size) {
         return userMapper.selectNew(size);
     }

@@ -4,7 +4,6 @@ import com.clem.narakaistudio.service.UserService;
 import com.clem.narakaistudio.service.model.User;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,9 +22,9 @@ public class LoginController {
     public String login(@ModelAttribute User user) {
         User registeredUser = userService.getUserInfo(user.getNickname(), user.getPassword());
         if (registeredUser != null) {
-            return "/index";
+            return "redirect:/";
         } else {
-            return "/register";
+            return "redirect:register";
         }
     }
 
@@ -38,9 +37,9 @@ public class LoginController {
     public String register(@ModelAttribute User user) {
         User registerUser = userService.register(user);
         if (registerUser != null) {
-            return "/login";
+            return "redirect:login";
         } else {
-            return "/register";
+            return "redirect:register";
         }
     }
 }
